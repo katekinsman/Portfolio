@@ -1,0 +1,22 @@
+{
+	"Coffee in U District": {
+		"category_filter": "cafes,coffee",
+		"term": "coffee",
+		"location": "University District, Seattle"
+	},
+	"Beer in Capitol Hill": {
+		"category_filter": "bars,pubs,beer_and_wine",
+		"term": "beer",
+		"location": "Capitol Hill, Seattle"
+	},
+	"Pho in International District": {
+		"category_filter": "vietnamese",
+		"term": "pho",
+		"location": "International District, Seattle"
+	},
+	"Tacos in Rainier Valley": {
+		"category_filter": "mexican",
+		"term": "taco trucks",
+		"location": "Rainier Valley, Seattle"
+	}
+}

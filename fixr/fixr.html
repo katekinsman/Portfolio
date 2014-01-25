@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--
+        fixr.html
+        HTML for HW1: Fixr
+        INFO 344A, Spring 2013
+        Kate Kinsman
+        -->
+		
+		<title>Fixr</title>
+		
+		<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+		
+		<link rel="stylesheet" href="../jquery.mobile-1.3.2.min.css">
+		<script src="../jquery-1.10.2.min.js"></script>
+		<script src="../jquery.mobile-1.3.2.min.js"></script>
+		
+		<link rel="stylesheet" href="fixr.css">
+		<script src="fixr.js"></script>
+	</head>
+
+	<body>
+		<div data-role="page" id="categories" >
+            <section data-role="header">
+			    <h1>What&rsquo;s your fix?</h1>
+            </section>
+            <section data-role="content" id="categories-list">
+			    <ul data-role="listview" data-inset="true">
+			    </ul>
+            </section>
+		</div>
+		
+		<div data-role="page" data-add-back-btn="true" id="results" >
+            <section data-role="header">
+                <h1>Fixr</h1>
+                <div ><a class="yelp" href="http://www.yelp.com/"><img
+                        src="courses.washington.edu/info344/homework/1/yelp.png" alt="Powered by Yelp"></a></div>
+            </section>
+			<!-- For use in sorting additional feature:
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+				<legend>Sort by:</legend>
+				
+				<label><input type="radio" name="sort" value="0" checked> Overall</label>
+				<label><input type="radio" name="sort" value="1"> Distance</label>
+				<label><input type="radio" name="sort" value="2"> Rating</label>
+			</fieldset>
+			-->
+            <section data-role="content" id="results-list">
+                <ul data-role="listview" data-inset="true">
+                </ul>
+            </section>
+		</div>
+		
+		<div data-role="page" data-add-back-btn="true" id="map" >
+            <section data-role="header">
+			    <h1>Fixr</h1>
+			    <div ><a class="yelp" href="http://www.yelp.com/"><img
+                    src="courses.washington.edu/info344/homework/1/yelp.png" alt="Powered by Yelp"></a></div>
+            </section>
+			<div data-role="content" id="map_container">
+			</div>
+		</div>
+
+	</body>
+</html>

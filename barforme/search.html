@@ -1,0 +1,343 @@
+<!--Bar Search Page-->
+<script>
+$(document).ready(function() {
+	$('#results').hide();
+	$('#find_bars').click(function() {
+		$('#home_descr').hide();
+		$('#results').show();
+		$('#refresh').removeClass('disabled');
+	});
+});
+</script>
+
+<h2 class="text-center">Bar Search</h2>
+
+<div class='container-fluid'>
+	<div class='row-fluid'>
+		<div class='span3'>
+            <!--<h3>Filters</h3> Just marking you can delete this-->
+            <div class='well'>
+				<button id='refresh' class="btn btn-block btn-primary disabled">Refresh Search</button>
+			</div>
+            <div class='well in collapse' id="location-search" class="collapse">
+			    <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                                         data-target="#location-search"><i class="icon-plus"></i></button>
+                    Location</h4>
+                <select class="span10">
+                    <option>State</option>
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>Arizona</option>
+                    <option>Arkansas</option>
+                    <option>Washington</option>
+                </select>
+                <select class="span10">
+                    <option>City</option>
+                    <option>Seattle</option>
+                    <option>Redmond</option>
+                    <option>Issaquah</option>
+                    <option>Bellevue</option>
+                </select>
+                <select class="span10">
+                    <option>Neighborhood</option>
+                    <option>Capitol Hill</option>
+                    <option>University District</option>
+                    <option>Wallingford</option>
+                    <option>Ravenna</option>
+                </select>
+                <p>Don't know? <a href="#find">Let us help you!</a></p>
+            </div>
+            <div class='well collapse' id="atmosphere-search" class="collapse">
+                <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                            data-target="#atmosphere-search"><i class="icon-plus"></i></button> Atmosphere</h4>
+                <label class="checkbox">
+                    <input type="checkbox"> Chic
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Classy
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Comfortable
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Elegant
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Entertaining
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Fancy
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Friendly
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Hipster
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Lively
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Modern
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Noisy
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Quiet
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Retro
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Romantic
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Rustic
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Trendy
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Welcoming
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Wild
+                </label>
+            </div>
+            <div class='well collapse' id="type-search" class="collapse">
+                <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                            data-target="#type-search"><i class="icon-plus"></i></button> Type</h4>
+                <label class="checkbox">
+                    <input type="checkbox"> Biker
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Brewery
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Champagne
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Club
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Cocktail
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Comedy
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Country
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Dive
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Gastro-pub
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Gay and Lesbian
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Hookah
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Hotel
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Karaoke
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Lounge
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Neighborhood
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Piano
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Pubs
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Sports
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Taverns
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Theme
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Topless
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Traditional
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Wine
+                </label>
+            </div>
+            <div class='well collapse' id="deals-search" class="collapse">
+                <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                            data-target="#deals-search"><i class="icon-plus"></i></button> Deals</h4>
+                <label class="checkbox">
+                    <input type="checkbox"> 2 for 1
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Half-Tab
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Happy Hour
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Ladies Night
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Well Specials
+                </label>
+            </div>
+            <div class='well collapse' id="price-search" class="collapse">
+                <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                            data-target="#price-search"><i class="icon-plus"></i></button> Price</h4>
+                <label class="checkbox">
+                    <input  type="checkbox"> Inexpensive
+                </label>
+                <label class="checkbox">
+                    <input  type="checkbox"> Moderately Expensive
+                </label>
+                <label class="checkbox">
+                    <input  type="checkbox"> Expensive
+                </label>
+            </div>
+            <div class='well collapse' id="age-search" class="collapse">
+                <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                            data-target="#age-search"><i class="icon-plus"></i></button> Age Range</h4>
+                <label class="checkbox">
+                    <input type="checkbox"> 21-24
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> 25-34
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> 35-44
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> 44-54
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> 55-64
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> 65+
+                </label>
+            </div>
+            <div class='well collapse' id="activities-search" class="collapse">
+                <h4><button type="button" class="btn btn-mini" data-toggle="collapse"
+                            data-target="#activities-search"><i class="icon-plus"></i></button> Activities</h4>
+                <label class="checkbox">
+                    <input type="checkbox"> Beer Pong
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Comedy Night
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Dancing
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Food Specials
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Guest Speaker
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Karaoke
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Live Music
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox"> Trivia
+                </label>
+            </div>
+
+		</div>
+		<div class='span9'>
+            <!--<h3 class="text-center">Results</h3> Just marking you can delete this-->
+			<div id='home_descr' class="hero-unit">
+				<p>
+					Bar for Me is dedicated to finding the perfect bar that suits your mood and providing exclusive discounts for users. You have the ability to search bars by location, atmosphere, bar types, deals, price, age, and bar activities.
+				</p>
+				<p>
+					<small>
+					So pick a destination from the lists at left to begin!
+					</small>
+					<br/>
+					<button type="button" class="btn btn-primary" id="find_bars">Find Bars</button>
+				</p>
+			</div>
+			<div id='results'>
+				<div class='well'>
+	                <div class="media">
+	                    <div class="media-body">
+	                        <a href="home.php?bar=1">
+	                            <h4 class="media-heading">Finn MacCools Irish Pub & Restaurant</h4>
+	                        </a>
+	                        <h5>Inexpensive</h5>
+	                        <p>Finn MacCool&#39;s Irish Public House was first opened at 4217 University Way NE in Seattle,
+	                            WA on October 10, 2002. Over the years and thru that green door many wonderful times have
+	                            been had. Come on by, have a pint, and become a part of the legend. </p>
+	                        <ul class="inline">
+	                            <li>Comfortable</li>
+	                            <li>Friendly</li>
+	                            <li>Lively</li>
+	                        </ul>
+	                        <button class="btn btn-small btn-success">Get Coupons</button>
+	                    </div>
+	                </div>
+				</div>
+	            <div class='well'>
+	                <div class="media">
+	                    <div class="media-body">
+	                        <a>
+	                        <h4 class="media-heading">Big Time Brewing Company</h4>
+	                        </a>
+	                        <h5>Inexpensive</h5>
+	                        <p>Big Time is a Classic American Alehouse brewing all our own beer in our on-site
+	                            microbrewery. Our award winning beer and tasty pub food have been one of Seattle's
+	                            "U-District" traditions since 1988. </p>
+	                        <ul class="inline">
+	                            <li>Comfortable</li>
+	                            <li>Rustic</li>
+	                            <li>Lively</li>
+	                        </ul>
+	                        <button class="btn btn-small btn-success">Get Coupons</button>
+	                    </div>
+	                </div>
+	
+	            </div>
+	            <div class='well'>
+	                <div class="media">
+	                    <div class="media-body">
+	                    	<a>
+	                        <h4 class="media-heading">Shultzy's Sausage</h4>
+	                        </a>
+	                        <h5>Moderately Expensive</h5>
+	                        <p>Students like their food quick and cheap. Quick cheap food can be good. But the University
+	                            District eateries typically aren't anything special. Shultzy's however, for some reason,
+	                            has decided to make all their own sausages in house. And this, I suspect, is their secret
+	                            weapon.</p>
+	                        <ul class="inline">
+	                            <li>Comfortable</li>
+	                            <li>Friendly</li>
+	                            <li>Lively</li>
+	                        </ul>
+	                        <button class="btn btn-small btn-success">Get Coupons</button>
+	                    </div>
+	                </div>
+	            </div>
+				<button type="button" class="btn" id="more-results" data-loading-text="loading...">More Results</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,60 @@
+<!--Specific Bar Page-->
+<div class="row">
+	<div class="span5">
+		<h2 class="text-right">{%%Bar.name%%}</h2>
+		<p class="text-right"><a href="{%%Bar.webURL%%}" alt="{%%Bar.short%%}">{%%Bar.webURL%%}</a></p>
+		<p class="text-right"><a href="{%%Bar.yelpURL%%}" 
+		alt="Yelp page">Yelp page</a></p>
+		<p class="text-right">{%%Bar.email%%}</p>
+		<p class="text-right">{%%Bar.phone%%}</p>
+		<p class="text-right"><button class="btn btn-success">Get Coupons</button></p>
+	</div>
+	<div class="span4">
+		<img src="{%%Bar.image%%}" alt="{%%Bar.short%%}" />
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="span5">
+	<br>
+		<p>{%%Bar.description%%}</p>
+		<p><strong>Bar Type:</strong> {%%BarType.type%%}</p>
+		<p><strong>Age Range</strong> {%%AgeRange.range%%}</p>
+		<p><strong>Price Range</strong> {%%PriceRange.range%%}</p>
+		<p><strong>Similar bars in the area:</strong> 
+		{%%getSimilarBars%%}
+		</p>
+	</div>
+	<div class="span3">
+		<h3>Schedule</h3>
+		<div class="accordion" id="accordion2">
+			{%%beginRepeat for each Day
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+					{%%Day.day%%}
+					</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse in">
+					<div class="accordion-inner">
+						{%%displaySchedule%%}
+					</div>
+				</div>
+			</div>
+			endRepeat%%}
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="span5">
+		{%%getGoogleMap%%}
+	</div>
+	<div class="span3">
+		<h3>Transportation</h3>
+		<p>{%%Bar.street1%%} <br>
+		{%%Bar.city%%} {%%Bar.state%%} {%%Bar.zip%%}</p>
+		<p><strong>Recommended Type:</strong> {%%TransportAdvice.transport%%}</p>
+		<p><strong>Price:</strong> {%%TransportAdvice.price%%}</p>
+		<p><strong>Explanation:</strong> {%%TransportAdvice.explanation%%}</p>
+	</div>
+</div>

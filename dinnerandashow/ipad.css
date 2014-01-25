@@ -1,0 +1,35 @@
+/* Janella Ignacio
+   Kate Kinsman
+   Ashley Retzlaff
+   INFO 343C Final Project 
+   This project searches for events and restaurants within the user's given area code;
+   they can then add events and/or restaurants to their "itinerary" and map each item's location in given order.
+   This file provides styles to the page when the width is at least 690px wide */
+
+body {
+	margin: 2em;
+}
+
+header {
+	font-size: 3em;
+}
+
+.content {
+	width: 30em;
+	height: 7em;
+	padding: 2em;
+	margin-bottom: 3em;
+}
+
+#events {
+	width: 25em;
+}
+
+#tabs{
+	width: 31em;
+}
+
+button, .group button, .group,  #tabs, #text {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.1em;
+}

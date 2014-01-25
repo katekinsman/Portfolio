@@ -1,0 +1,91 @@
+/* Kate Kinsman
+   Ashley Retzlaff
+   INFO 343C Mini-Project: Colorpicker
+   11/1/12
+   CSS file for preview page to Colorpicker */
+   
+/* Colors will be injected into this page through javascript */
+
+#preview {
+	font-size: 1em;
+	font-family: 'Times', serif;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2em;
+	padding-right: 2em;
+	background-attachment: fixed;
+}
+
+#preview p {
+	margin-top: 1em;
+}
+
+#preview img {
+	float: right;
+	padding-left: 1em;
+	padding-bottom: 1em;
+}
+
+#preview header {
+	padding: 1em;
+	margin-bottom: 1em;
+	font-family: 'Times', serif;
+	text-align: center;
+	border: 2px solid;
+	font-size: 2em;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+#preview aside {
+	width: 20%;
+	padding: 1em;
+	float: right;
+	clear: both;
+	border: 2px solid;
+}
+
+#preview article {
+	padding-left: 1em;
+	padding-right: 1em;
+	overflow: auto;
+}
+
+#preview section {
+	width: 70%;
+	margin-bottom: 2em;
+	overflow: auto;
+	border: 2px solid;
+	padding: 1em;
+}
+
+#preview footer {
+	text-indent: 1em;
+	text-align: center;
+	border: 2px solid;
+}
+
+#preview i {
+	font-size: 1.5em;
+	font-weight: normal;
+	font-style: italic;
+	margin-left: 1em;
+	line-height: 1em;
+}
+
+#preview nav {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#preview a{
+	font-size: 1em;
+	font-family: 'Times', serif;
+	display: inline;
+	text-decoration: none;
+}
+
+#preview a:hover {
+	text-decoration: underline;
+	font-size: 1.3em;
+}

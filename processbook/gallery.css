@@ -1,0 +1,62 @@
+/*
+gallery.css
+CSS styles for sliding image gallery example, Lecture 8: Special Effects
+INFO 343, Autumn 2012
+Morgan Doocy
+*/
+
+/* A few basic styles... */
+body {
+	font-family: "Lucida Grande", "Lucida Sans", Calibri, sans-serif;
+	font-size: 110%;
+}
+
+/* Removes space between images, making them flush together. */
+img {
+	float: left;
+}
+
+/* Our "cropping area" - by restricting #gallery's width, and setting
+   overflow: hidden, this becomes a "window" through which we see the wider
+   #slider element behind it. */
+#gallery {
+	width: 450px;
+	height: 281px;
+/*	background-color: fuchsia;*/
+	overflow: hidden;
+/*	position: relative;*/ /* <- if we were to use position: absolute on #slider */
+}
+
+/* We move this left and right within #gallery (by setting the 'transform'
+   property using JavaScript) to show different images. */
+#slider {
+	width: 1800px;
+	
+	-webkit-transition: -webkit-transform 1s ease;
+	-moz-transition: -moz-transform 1s ease;
+	-ms-transition: -ms-transform 1s ease;
+	-o-transition: -o-transform 1s ease;
+	transition: transform 1s ease;
+	
+	/* If we were using abolute positioning instead of transform...*/
+/*	position: absolute;*/
+/*	left: -450px;*/
+	
+	/* We could also use left margin to move it instead.*/
+/*	margin-left: -450px;*/
+}
+
+/* Make the list of links look a little nicer. */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+	margin: 1em;
+}
+
+
+

@@ -1,0 +1,214 @@
+/*
+colorpicker.css
+CSS file for mini-project
+INFO 343 Autumn 2012
+Kate Kinsman
+Ashley Retzlaff
+ */
+ 
+body {
+	background-color: #2d2d2d;
+	font-family: helvetica, sans-serif;
+	font-weight: 400;
+}
+
+header  p {
+	text-align: center;
+	font-size: 3em;
+	color: white;
+	font-family: 'Overlock', cursive;
+	font-weight: 900;
+	font-style: italic;
+}
+
+section article {
+	width: 13em;
+	margin-top: 7em;
+}
+	
+section {
+	width: 40em;
+	overflow: hidden;
+	border: solid 2px;
+	background-color: #b4b4b4;
+	padding: 2em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+section aside {
+	float: right;
+}
+
+section aside div {
+	width: 20em;
+	height: 7em;
+	border: 2px solid;
+	clear: left;
+	margin-top: 1em;
+}
+
+footer {
+}
+
+section p {
+	overflow: hidden;
+}
+#mainswatch {
+	width: 40em;
+	margin-top: 1em;
+}
+#mainswatch div {
+	width: 40em;
+	height: 7em;
+	border: 2px solid;
+}
+#r,#g,#b{
+    width: 10em;
+    margin-left: 3.5em;
+}
+#button {
+	text-align: center;
+}
+button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+    background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+    background-color:#f9f9f9;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#666666;
+    font-size:15px;
+    font-weight:normal;
+    font-style:normal;
+    height:35px;
+    line-height:35px;
+    width:220px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #ffffff;
+}
+button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+    background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+    background-color:#e9e9e9;
+}
+button:active {
+     position:relative;
+     top:1px;
+}
+
+.black {
+}
+
+.white {
+}
+
+#preview {
+	font-size: 1em;
+	font-family: 'Overlock', cursive;
+	font-weight: 400;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2em;
+	padding-right: 2em;
+	background-attachment: fixed;
+}
+
+#preview p {
+	margin-top: 1em;
+}
+
+#preview img {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1em;
+	padding-bottom: 1em;
+}
+
+#preview #header {
+	
+	padding: .25em;
+	margin-bottom: .25em;
+	font-family: 'Overlock', cursive;
+	font-weight: 900;
+	text-align: center;
+	border: 2px solid;
+	font-size: 3em;
+	font-style: italic;
+}
+
+#preview aside {
+	width: 15em;
+	padding: 1em;
+	float: right;
+	clear: both;
+	border: 2px solid;
+}
+
+#preview article {
+	overflow: auto;
+}
+
+#preview section {
+	width: 35em;
+	margin-bottom: 2em;
+	overflow: auto;
+	border: 2px solid;
+	padding: 1em;
+}
+
+#preview #footer {
+	text-indent: 1em;
+	text-align: center;
+	border: 2px solid;
+}
+
+#preview i {
+	font-size: 1.5em;
+	font-weight: normal;
+	font-style: italic;
+	margin-left: 1em;
+	line-height: 1em;
+}
+
+#preview nav {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#preview a{
+	font-size: 1em;
+	font-family: 'Overlock', cursive;
+	font-weight: 400;
+	display: inline;
+	text-decoration: none;
+	color: black;
+}
+
+#preview a:hover {
+	text-decoration: underline;
+	font-size: 1.3em;
+	color: white;
+}
+
+.round {
+    border-radius: 12px; -webkit-border-radius: 12px; -moz-border-radius: 12px; 
+} 

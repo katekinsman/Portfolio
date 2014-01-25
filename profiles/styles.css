@@ -1,0 +1,38 @@
+body {
+	font-family: 'Droid Sans';
+	font-size: 110%;
+}
+
+header {
+	background-color: #eef;
+}
+
+aside {
+	float: left;
+	width: 10em;
+	background-color: #efe;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li.current {
+	background-color: #aba;
+}
+
+nav ul > li > ul > li:before {
+	content: '– ';
+}
+
+section {
+	margin-left: 11em;
+	background-color: #fee;
+}
+
+footer {
+	clear: left;
+	background-color: #fef;
+}

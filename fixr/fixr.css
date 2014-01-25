@@ -1,0 +1,36 @@
+/*
+fixr.css
+Provided CSS code for HW1: Fixr
+INFO 344, Spring 2013
+Morgan Doocy
+*/
+
+.ui-controlgroup-label {
+    float: left;
+    width: 4em;
+    line-height: 2em;
+}
+.ui-controlgroup-control {
+    margin-left: 4em;
+}
+#results fieldset {
+    width: 17em;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#map, #map > div:last-child {
+    height: 100%;
+}
+.ui-li-aside {
+    margin-top: 1.4em;
+}
+
+.yelp {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    position: absolute;
+    top: 6px;
+    right: 5px;
+}

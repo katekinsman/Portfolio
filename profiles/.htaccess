@@ -1,0 +1,12 @@
+RewriteEngine on
+
+# Pass-through existing files (e.g. images, scripts)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [L]
+
+# /pageid/ ? index.php?page=pageid
+RewriteRule ^(about|blog|portfolio)/?$ index.php?page=$1 [QSA]
+
+# /client/ ? index.php?page=portfolio&client=sanitized portfolio name.
+RewriteRule ^portfolio/(acme-skin-products-inc|the-law-offices-of-bob-lob-esq|foo-bar-and-grill)/?$ index.php?page=portfolio&client=$1 [QSA]

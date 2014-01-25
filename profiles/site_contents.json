@@ -1,0 +1,9 @@
+{
+	"navigation": {
+		"about": "About Shoofly",
+		"register": "Register",
+		"photos": "Photos",
+        "horses": "Our Horses",
+        "contact": "Contact Us"
+	}
+}
