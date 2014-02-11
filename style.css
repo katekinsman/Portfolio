@@ -5,7 +5,7 @@ body{
 }
 
 nav{
-    background-color: gray;
+    background-color: #bdd09f;
     padding: .25em .5em .25em 1.5em;
     font-size: 1.5em;
 }
@@ -48,12 +48,12 @@ header h1{
 }
 
 header dt, header h1{
-    color: #ff8c00;
+    color: #404f24;
     font-size: 7em;
 }
 
 header dd{
-    color: gray;
+    color: #bdd09f;
     font-size: 2em;
     margin-left: 4em;
 }
@@ -112,7 +112,7 @@ h3{
 }
 
 a:hover, a:hover{
-    color: #ff8c00;
+    color: #404f24;
 }
 
 .portfolioCategory{
