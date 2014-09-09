@@ -1,6 +1,6 @@
 /*
 process_book.css
-CSSs file for process book
+CSS file for process book
 INFO 360 Autumn 2012
 Kate Kinsman
 */
@@ -11,7 +11,7 @@ body{
     color: black;
     background-color: #ffffff/*#999967*/;
 }
-#content, footer{
+footer{
     margin-left: auto;
     margin-right: auto;
 }
@@ -44,20 +44,69 @@ footer{
     font-family: 'Chelsea Market', helvetica, sans-serif;
     text-align: center;
 }
-/*
-#1, #2, #3, #4, #5, #6,#7, #8, #9, #10, #11{
-    display: block;
 
-}*/
+/*slider*/
+
+#slider{
+    position: relative;
+    overflow: hidden;
+    margin: 5em auto 0 auto;
+    height: 20em;
+    width: 45em;
+}
+#sliderul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 35em;
+}
+
+#sliderul .sliderli {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding-left: 6em;
+    width: 70em;
+    height: auto;
+}
+
+a.control_prev, a.control_next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+.control_next img, .control_prev img{
+    width: 3em;
+    height: auto;
+}
+a.control_prev {
+    border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+}
 
 #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10, #s11{
-    margin: 2em;
-    margin-bottom: 6em;
-    width: 35em;
+    max-width: 50em;
     min-height: 28em;
     background-color: #cccccc;
     border-radius: 10px;
     padding: 1em;
+}
+/*slider over */
+#desc{
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #s1 ul{
@@ -68,9 +117,6 @@ footer{
 #s1 li{
     list-style-type: none;
     padding-left: 0em;
-}
-
-li{
     padding-bottom: .5em;
 }
 
@@ -81,14 +127,14 @@ h1{
 h2{
     font-family: 'Chelsea Market', helvetica, sans-serif;
 }
-
+/*
 .mountain{
     margin: auto;
     margin-top: 2em;
 }
-
+*/
 .mountain img{
-    width: 25em;
+    width: 35em;
     height: auto;
 }
 

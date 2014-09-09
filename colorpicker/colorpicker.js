@@ -5,79 +5,61 @@ INFO 343 Autumn 2012
 Kate Kinsman
 Ashley Retzlaff */
 
-INITIAL_COLOR = true;
-
 
 // Displays the color of the swatches
-function displayColor() {
-	if (INITIAL_COLOR == true) {
-		var box = 'r';
-	} else {
-		var box = this.id;
-	}
-	getColor(box);
-}
-
-// Decides which text box is clicked to put input into
-function getColor(box) {
+function displayColor(box) {
     //creates new color object
     var newColor = new Color();
 
     if (box == 'r' || box == 'g' || box == 'b') {
-
-        // Corrects if user puts in value over 255 for RGB boxes
-        /*if ($('#r').val() > 255) {
-			$('#r').val('255');
-		}
-		if ($('#g').val() > 255) {
-			$('#g').val('255');
-		}
-		if ($('#b').val() > 255) {
-			$('#b').val('255');
-		}*/
-
 		//sets RGB values
-		newColor.setRGB($('#r').slider("value"), $('#g').slider("value"), $('#b').slider("value"));
+        var r = $('#r').slider("option", "value");
+        var g = $('#g').slider("option", "value");
+        var b = $('#b').slider("option", "value");
+		newColor.setRGB(r, g, b);
     } else {
 		//sets Hex value
 		newColor.setHex($('#hexnumber').val());
     }
 
+    //
     updateBoxes(newColor);
+
 	// Adds text that displays the RGB and hex numbers of the main swatch
     var colorString = "rgb(" + newColor.r + "," + newColor.g + "," + newColor.b + ")";
     $('#mainswatch div p.black, #mainswatch div p.white').text(colorString + ' OR ' + newColor.hex);
 	
-	// Changes color of swatches
+	// Changes color of all swatches
     injectMain(colorString);
-    injectSwatches(newColor,colorString);
+    injectSwatches(newColor, colorString);
 
 	// Changes text color of swatch text
 	$('.black').css('color', 'black').css('text-align', 'center');
 	$('.white').css('color', 'white').css('text-align', 'center');
-	INITIAL_COLOR = false;
 }
 
-// Updates the values inside all text boxes as each is changed
+// Updates the values R, G, B sliders and Hex box according to the parameterized new color
 function updateBoxes(newColor){
-    $('#r').slider("value", newColor.r);
-    $('#g').slider("value", newColor.g);
-    $('#b').slider("value", newColor.b);
+    $('#r').slider("option", "value", newColor.r);
+    $('#g').slider("option", "value", newColor.g);
+    $('#b').slider("option", "value", newColor.b);
     $('#hexnumber').val(newColor.hex)
 }
 
-// Injects the selected color into the main swatch
+// Injects the new color into the main swatch according to an parameterized color string
 function injectMain(colorString) {
-	var main = $('#mainswatch div').css('background-color', colorString);
+	$('#mainswatch div').css('background-color', colorString);
 }
 
-// Injects elements of the three swatches
+// Injects variant colors and their corresponding hex and RGB into secondary swatches
+// Updates the colors on the preview site
 function injectSwatches(newColor, colorString) {
     var variant1 = new Color();
     var variant2 = new Color();
     var variant3 = new Color();
 
-	// Sets HSL of variants, changes the swatches to variant color, and adds text that displays the RGB and hex numbers of the variants
+	// Sets HSL of variants, changes the swatches to variant color, and adds text that displays the RGB and hex numbers
+	//of the variants
 	for(var i = 1; i < 4; i++) {
 		var multiplier = (22.5 * i);
 		
@@ -90,7 +72,8 @@ function injectSwatches(newColor, colorString) {
 
             var variantString1 = "rgb(" + variant1.r + "," + variant1.g + "," + variant1.b + ")";
             $('p.black, p.white', '#1').text(variantString1 + ' OR ' + variant1.hex);
-            var newSwatch = $('#1').css('background-color', variantString1);
+            //newSwatch
+            $('#1').css('background-color', variantString1);
 
 		} else if (i == 2) {
 			if (newColor.h + multiplier > 360) {
@@ -101,7 +84,8 @@ function injectSwatches(newColor, colorString) {
 
             var variantString2 = "rgb(" + variant2.r + "," + variant2.g + "," + variant2.b + ")";
             $('p.black, p.white', '#2').text(variantString2 + ' OR ' + variant2.hex);
-            var newSwatch = $('#2').css('background-color', variantString2);
+            //newSwatch
+            $('#2').css('background-color', variantString2);
 
 		} else {
 			if (newColor.h + multiplier > 360) {
@@ -113,12 +97,13 @@ function injectSwatches(newColor, colorString) {
 
             var variantString3 = "rgb(" + variant3.r + "," + variant3.g + "," + variant3.b + ")";
             $('p.black, p.white', '#3').text(variantString3 + ' OR ' + variant3.hex);
-            var newSwatch = $('#3').css('background-color', variantString3);
+            //newSwatch
+            $('#3').css('background-color', variantString3);
 		}
 	}
 	
 	// Updates the colors on the preview page
-	$('#preview #header, #preview #footer').css('background-color', variantString3);
+	$('#header, #footer').css('background-color', variantString3);
 	$('#preview').css('background-color', colorString);
 	$('#preview section').css('background-color', variantString2);
 	$('#preview aside').css('background-color', variantString1);
@@ -126,16 +111,18 @@ function injectSwatches(newColor, colorString) {
 
 $(document).ready(function () {
 
-    $('#r,#g,#b').slider({min:0,max:255,animate:true});
+    $('#r, #g, #b').slider({value: 0, min:0, max:255, animate:true});
     displayColor();
-    $('#hexnumber').change(displayColor);
-    $('#r,#g,#b').slider("change", function(event, ui){
-        displayColor();
+    //$('#hexnumber').change(displayColor('hex'));
+    $('#r, #g, #b').slider({
+        "change": function(event, ui){
+            displayColor(this.id);
+        }
     });
 
 	// Controls the dialog Jquery UI function
 	$(function() {
-        $( ".simple_overlay" ).dialog({
+        $('.simple_overlay').dialog({
             autoOpen: false,
             show: "blind",
             hide: "blind",
@@ -143,8 +130,8 @@ $(document).ready(function () {
 			height:66 * 16,
 			resizable: false
         });
-        $( "button" ).click(function() {
-            $( ".simple_overlay" ).dialog( "open" );
+        $('#button').click(function() {
+            $('.simple_overlay').dialog("open");
             return false;
         });
     });

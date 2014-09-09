@@ -5,10 +5,30 @@ INFO 360 Autumn 2012
 Kate Kinsman
 */
 
-var SECTION= 1;
+var SECTION = 1;
+
+function getPrevious(){
+    if(SECTION == 1){
+        SECTION = 11;
+    }else{
+        SECTION --;
+    }
+
+    var file = 's' + SECTION + '.html';
+    if(SECTION < 12){
+        $.ajax(file, {
+            success: injectPrevious,
+            error: ajaxError
+        })
+    }
+}
 
 function getNext(){
-    SECTION ++;
+    if(SECTION == 11){
+        SECTION = 1;
+    }else{
+        SECTION ++;
+    }
     var file = 's' + SECTION + '.html';
     if(SECTION < 12){
         $.ajax(file, {
@@ -16,15 +36,18 @@ function getNext(){
             error: ajaxError
         })
     }
-    if(SECTION > 10){
-        $('a').remove();
-    }
 }
 
 function injectNext(data){
-    var newSection = $('<div>', {'id': SECTION}).html(data);
-    $('#content').append(newSection);
+    var newSection = $('<div>', {'id': 'desc'}).html(data);
+    $('#desc').replaceWith(newSection);
 }
+function injectPrevious(data){
+    var newSection = $('<div>', {'id': 'desc'}).html(data);
+    $('#desc').replaceWith(newSection);
+}
+
+
 
 function ajaxError(jqxhr, type, error) {
     var msg = "An Ajax error occurred!\n\n";
@@ -47,6 +70,48 @@ function ajaxError(jqxhr, type, error) {
     alert(msg);
 }
 
+var slideCount = $('#sliderul .sliderli').length;
+var slideWidth = $('#sliderul .sliderli').width();
+var slideHeight = $('#sliderul .sliderli').height();
+var sliderUlWidth = slideCount * slideWidth;
+
+$('#slider').css({ width: slideWidth, height: slideHeight });
+
+$('#sliderul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+$('#sliderul .sliderli:last-child').prependTo('#sliderul');
+
+function moveLeft() {
+    $('#sliderul').animate({
+        left: + slideWidth
+    }, 200, function () {
+        $('#sliderul .sliderli:last-child').prependTo('#sliderul');
+        $('#sliderul').css('left', '');
+    });
+    getPrevious();
+};
+
+function moveRight() {
+    $('#sliderul').animate({
+        left: - slideWidth
+    }, 200, function () {
+        $('#sliderul .sliderli:first-child').appendTo('#sliderul');
+        $('#sliderul').css('left', '');
+    });
+    getNext();
+};
+
 $(document).ready(function(){
-    $('button').click(getNext);
+//    $('button').click(getNext);
+    $.ajax('s1.html', {
+        success: injectNext,
+        error: ajaxError
+    })
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
 });
