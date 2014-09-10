@@ -92,7 +92,7 @@ button {
     border-bottom-left-radius:20px;
     text-indent:0;
     border:1px solid #dcdcdc;
-    display:inline-block;
+    display:inline;
     color:#666666;
     font-size:15px;
     font-weight:normal;

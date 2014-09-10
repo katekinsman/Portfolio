@@ -90,8 +90,12 @@ h3{
 }
 
 #resumeContent h1{
-    margin-bottom: 0;
-    margin-top: 2em;
+     margin-bottom: 0;
+     margin-top: 2em;
+ }
+
+#resumeContent h1:first-child{
+    margin-top: 0em;
 }
 
 #resumeContent dd{

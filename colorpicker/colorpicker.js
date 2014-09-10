@@ -6,59 +6,56 @@ Kate Kinsman
 Ashley Retzlaff */
 
 
-// Displays the color of the swatches
+// Display the color of the swatches
 function displayColor(box) {
-    //creates new color object
+    //create new color object
     var newColor = new Color();
 
+    //if slider was changed
     if (box == 'r' || box == 'g' || box == 'b') {
-		//sets RGB values
+		//set RGB values
         var r = $('#r').slider("option", "value");
         var g = $('#g').slider("option", "value");
         var b = $('#b').slider("option", "value");
 		newColor.setRGB(r, g, b);
+        //update hex input value
+        $('#hexnumber').val(newColor.hex)
+    //if hex was changed
     } else {
-		//sets Hex value
+		//set Hex value
 		newColor.setHex($('#hexnumber').val());
+        //update slider values
+        $('#r').slider("option", "value", newColor.r);
+        $('#g').slider("option", "value", newColor.g);
+        $('#b').slider("option", "value", newColor.b);
     }
 
-    //
-    updateBoxes(newColor);
-
-	// Adds text that displays the RGB and hex numbers of the main swatch
+	// Add text that displays the RGB and hex numbers of the main swatch
     var colorString = "rgb(" + newColor.r + "," + newColor.g + "," + newColor.b + ")";
     $('#mainswatch div p.black, #mainswatch div p.white').text(colorString + ' OR ' + newColor.hex);
 	
-	// Changes color of all swatches
+	// Change color of all swatches
     injectMain(colorString);
     injectSwatches(newColor, colorString);
 
-	// Changes text color of swatch text
+	// Change text color of swatch text
 	$('.black').css('color', 'black').css('text-align', 'center');
 	$('.white').css('color', 'white').css('text-align', 'center');
 }
 
-// Updates the values R, G, B sliders and Hex box according to the parameterized new color
-function updateBoxes(newColor){
-    $('#r').slider("option", "value", newColor.r);
-    $('#g').slider("option", "value", newColor.g);
-    $('#b').slider("option", "value", newColor.b);
-    $('#hexnumber').val(newColor.hex)
-}
-
-// Injects the new color into the main swatch according to an parameterized color string
+// Inject the new color into the main swatch according to an parameterized color string
 function injectMain(colorString) {
 	$('#mainswatch div').css('background-color', colorString);
 }
 
-// Injects variant colors and their corresponding hex and RGB into secondary swatches
-// Updates the colors on the preview site
+// Inject variant colors and their corresponding hex and RGB into secondary swatches
+// Update the colors on the preview site
 function injectSwatches(newColor, colorString) {
     var variant1 = new Color();
     var variant2 = new Color();
     var variant3 = new Color();
 
-	// Sets HSL of variants, changes the swatches to variant color, and adds text that displays the RGB and hex numbers
+	// Set HSL of variants, changes the swatches to variant color, and adds text that displays the RGB and hex numbers
 	//of the variants
 	for(var i = 1; i < 4; i++) {
 		var multiplier = (22.5 * i);
@@ -102,7 +99,7 @@ function injectSwatches(newColor, colorString) {
 		}
 	}
 	
-	// Updates the colors on the preview page
+	// Update the colors on the preview page
 	$('#header, #footer').css('background-color', variantString3);
 	$('#preview').css('background-color', colorString);
 	$('#preview section').css('background-color', variantString2);
@@ -115,12 +112,12 @@ $(document).ready(function () {
     displayColor();
     //$('#hexnumber').change(displayColor('hex'));
     $('#r, #g, #b').slider({
-        "change": function(event, ui){
+        stop: function(event, ui){
             displayColor(this.id);
         }
     });
 
-	// Controls the dialog Jquery UI function
+	// Control the dialog Jquery UI function
 	$(function() {
         $('.simple_overlay').dialog({
             autoOpen: false,
