@@ -32,10 +32,10 @@ a{
      color: black;
 }
 
-nav img, .socialMedia img{
-    height: 1.25em;
-    width: auto;
-}
+/*nav img, .socialMedia img{*/
+    /*height: 1.25em;*/
+    /*width: auto;*/
+/*}*/
 
 header{
     text-align: center;
