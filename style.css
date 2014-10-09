@@ -1,13 +1,24 @@
 body{
-    font-family: "Quicksand", tahoma;
+    font-family: "Quicksand", tahoma, sans-serif;
     font-weight: 400;
     margin: 0 0 0 0;
+    background: #ffffff;
 }
 
-nav{
+.smallTitle{
+    font-size: 3em;
+}
+
+.top-bar-section ul li a, .menu-icon span{
+    font-family: "Quicksand", tahoma, sans-serif;
+}
+
+.top-bar, .top-bar-section li:not(.has-form) a:not(.button){
     background-color: #bdd09f;
-    padding: .25em .5em .25em 1.5em;
-    font-size: 1.5em;
+}
+
+.socialMedia{
+    display: inline-block;
 }
 
 ul{
@@ -21,18 +32,9 @@ a{
      color: black;
 }
 
-nav li, footer li{
-    display: inline-block;
-    padding-right: 1em;
-}
-
-nav img{
+nav img, .socialMedia img{
     height: 1.25em;
     width: auto;
-}
-
-.socialMedia{
-    float: right;
 }
 
 header{
@@ -42,7 +44,6 @@ header{
 }
 
 header h1{
-    font-weight: 400;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
@@ -50,6 +51,7 @@ header h1{
 header dt, header h1{
     color: #404f24;
     font-size: 7em;
+    font-weight: normal;
 }
 
 header dd{
@@ -72,17 +74,20 @@ header dd{
 }
 
 h1{
+    font-family: "Quicksand", tahoma, sans-serif;
     font-size: 2em;
     font-weight: 400;
 }
 
 h2{
+    font-family: "Quicksand", tahoma, sans-serif;
     font-size: 1.25em;
     margin-bottom: .25em;
     font-weight: 400;
 }
 
 h3{
+    font-family: "Quicksand", tahoma, sans-serif;
     font-size: 1em;
     margin-bottom: .4em;
     margin-top: .4em;
@@ -151,7 +156,7 @@ a:hover, a:hover{
 
 .projectDate{
     font-size: .5em;
-    color: gray;
+    color: #808080;
     font-style: italic;
 }
 
