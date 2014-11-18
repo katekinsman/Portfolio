@@ -1,7 +1,42 @@
 <header>
-    <h1 class="hidden-for-small-only">PORTFOLIO</h1>
-    <h1 class="smallTitle show-for-small-only">PORTFOLIO</h1>
+    <h1 class="hidden-for-small-only">Portfolio</h1>
+    <h1 class="smallTitle show-for-small-only">Portfolio</h1>
 </header>
+<section class="portfolioCategory" id="web">
+    <h1>Web</h1><hr>
+    <article class="project">
+        <h2>&rsaquo;
+            <a href="http://www.depts.washington.edu/cm50year">UW CM Alumni Projects App</a><div class="projectDate">Fall 2014</div></h2>
+    </article>
+    <article class="project">
+        <h2>Capstone: SmartAdventure Educational Application<div class="projectDate">Winter/Spring 2014</div></h2>
+        <h3>
+            &rsaquo; <a href="http://jakcapstone.azurewebsites.net/">Prototype</a>
+        </h3>
+        <h3>
+            &rsaquo; <a href="http://jakcapstone.wordpress.com/">Process Blog</a>
+        </h3>
+    </article>
+    <article class="project">
+        <h2>&rsaquo;
+            <a href="http://www.shooflyfarm.com">Shoofly Farm</a><div class="projectDate">Fall 2013</div></h2>
+    </article>
+    <article class="project">
+        <h2>&rsaquo; <a href="colorpicker/colorpicker.html">Colorpicker</a><div class="projectDate">Fall 2012</div></h2>
+    </article>
+    <!--<article class="project">
+        <h2><a href="dinnerandashow/events.html">Dinner & A Show</a><div class="projectDate">Fall 2012</div></h2>
+    </article>
+    <article class="project">
+        <h2><a href="fixr/fixr.html">Fixr</a></h2>
+    </article>
+    <article class="project">
+        <h2><a href="twitter/twitter.html">Twitter</a></h2>
+    </article>
+    <article class="project">
+        <h2><a href="profiles/index.php">Profiles</a></h2>
+    </article>-->
+</section>
 
 <section class="portfolioCategory" id="design">
     <h1>Design</h1><hr>
@@ -36,34 +71,6 @@
             &rsaquo; <a href="BarForMeCodeSpec-web.pdf">Code Specification</a>
         </h3>
     </article>
-</section>
-
-<section class="portfolioCategory" id="web">
-    <h1>Web</h1><hr>
-    <article class="project">
-        <h2>&rsaquo;
-            <a href="http://jakcapstone.azurewebsites.net/">Capstone: SmartAdventure</a><div
-                    class="projectDate">Winter/Spring 2014</div></h2>
-    </article>
-    <article class="project">
-        <h2>&rsaquo;
-            <a href="http://www.shooflyfarm.com">Shoofly Farm</a><div class="projectDate">Fall 2013</div></h2>
-    </article>
-    <article class="project">
-        <h2>&rsaquo; <a href="colorpicker/colorpicker.html">Colorpicker</a><div class="projectDate">Fall 2012</div></h2>
-    </article>
-    <!--<article class="project">
-        <h2><a href="dinnerandashow/events.html">Dinner & A Show</a><div class="projectDate">Fall 2012</div></h2>
-    </article>
-    <article class="project">
-        <h2><a href="fixr/fixr.html">Fixr</a></h2>
-    </article>
-    <article class="project">
-        <h2><a href="twitter/twitter.html">Twitter</a></h2>
-    </article>
-    <article class="project">
-        <h2><a href="profiles/index.php">Profiles</a></h2>
-    </article>-->
 </section>
 
 <section class="portfolioCategory" id="analysis">

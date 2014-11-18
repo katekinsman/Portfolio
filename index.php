@@ -3,7 +3,7 @@
 <?php
     $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'home';
     $nav = json_decode(file_get_contents("site_contents.json"), true);
-    $pageheader = $nav['navigation'][$cur_page];
+    $pageheader = ($cur_page == 'home' ? $nav['navigation'][$cur_page] : "Kate Kinsman - $pageheader");
     $pagetitle =($cur_page == 'home' ? $pageheader : "Kate Kinsman - $pageheader");
 ?>
 
@@ -29,8 +29,9 @@
         <li class="name">
             <h1><a href="index.php?page=home">Kate Kinsman</a></h1>
         </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        <li class="toggle-topbar menu-icon">
+            <a href="#"><span></span></a>
+        </li>
     </ul>
 
     <section class="top-bar-section">
@@ -39,7 +40,7 @@
         <?php foreach ($nav['social'] as $media => $url) { ?>
             <li>
                 <a href="<?= $url ?>">
-                    <img src="<?= $media ?>.png" alt="<?= $media ?>">
+                    <img src="<?= $media ?>32.png" alt="<?= $media ?>">
                 </a>
             </li>
             <?php } ?>
@@ -56,32 +57,32 @@
     </section>
 </nav>
 
-    <main>
-    <!-- Begin contents of the page, to be loaded dynamically -->
-    <?php
-        include_once "$cur_page.php";
-    ?>
-    <!-- End dynamic content -->
-    </main>
+<main>
+<!-- Begin contents of the page, to be loaded dynamically -->
+<?php
+    include_once "$cur_page.php";
+?>
+<!-- End dynamic content -->
+</main>
 
-    <footer>
-        <p>&copy;2014 Kate Kinsman</p>
-        <ul class="show-for-small-only socialMedia">
-            <?php foreach ($nav['social'] as $media => $url) { ?>
-            <li>
-                <a href="<?= $url ?>"><?= $media ?>
-                    <img src="<?= $media ?>.png" alt="<?= $media ?>">
-                </a>
-            </li>
-            <?php } ?>
-        </ul>
-    </footer>
+<footer>
+    <div class="row inline-list show-for-small-only">
+        <?php foreach ($nav['social'] as $media => $url) { ?>
+        <div class="small-3 column">
+            <a href="<?= $url ?>">
+                <img src="<?= $media ?>32.png" alt="<?= $media ?>">
+            </a>
+        </div>
+        <?php } ?>
+    </div>
+    <p>&copy;2014 Kate Kinsman</p>
+</footer>
 
-    <script src="foundation-5.4.5.custom/js/vendor/jquery.js"></script>
-    <script src="foundation-5.4.5.custom/js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
+<script src="foundation-5.4.5.custom/js/vendor/jquery.js"></script>
+<script src="foundation-5.4.5.custom/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
 </body>
 
 </html>

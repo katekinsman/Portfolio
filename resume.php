@@ -1,20 +1,18 @@
 <header>
-    <h1 class="hidden-for-small-only">RESUME</h1>
-    <h1 class="smallTitle show-for-small-only">RESUME</h1>
-    <p>Want to print this? <a href="infoResume10.14.14.pdf">Go ahead.</a></p>
+    <h1 class="hidden-for-small-only">Resume</h1>
+    <h1 class="smallTitle show-for-small-only">Resume</h1>
 </header>
-
-
 <article id="resumeContent">
+    <p class="text-center">Want to print this? <a href="infoResume11.18.14.pdf">Go ahead.</a></p>
     <dl>
         <dt><h1>Objective</h1></dt><hr>
-            <dd><p>I'm interested in a full-time position that will provide experience in web development,
-                user experience design, and/or content strategy. I'm interested in making the information people
+            <dd><p>I'm interested in a full-time position that will provide experience in web development and/or
+                user experience/interface design. I'm interested in making the information people
                 consume on a daily basis more organized and easy to access and am open to opportunities related
                 to this goal.</p></dd>
         <dt><h1>Skills</h1></dt><hr>
-            <dd><p>Java, HTML, CSS, JavaScript, JQuery, PHP, SQL</p></dd>
-            <dd><p>elementary Photoshop, Premiere, InDesign</p></dd>
+            <dd><p>Java, HTML5, CSS3, JavaScript, JQuery, PHP, SQL</p></dd>
+            <dd><p>elementary Illustrator, Photoshop, Premiere</p></dd>
             <dd><p>Microsoft Word, Excel, PowerPoint, Publisher</p></dd>
 
         <dt><h1>Relevant Coursework</h1></dt><hr>
@@ -54,20 +52,27 @@
 
         <dt><h1>Previous Employment</h1></dt><hr>
             <dd>
+                <h2>UW Construction Management</h2>
+                <h3>Web Developer:</h3>
+                <p>Designed and implemented a web application allowing UWCM graduates to input information about projects
+                    they&#39;ve contributed to. Maps all projects. Hand-coded entire app using HTML, CSS, JS, and JQuery on
+                    the front-end and PHP and MySQL on the back-end. Designed and built the MySQL database. Utilized the
+                    Foundation framework for responsiveness and the Google Maps API for mapping.</p>
+            </dd>
+            <dd>
                 <h2>Shoofly Farm LLC</h2>
                 <h3>Web Developer:</h3>
-                <p>Designed and implemented a new interface and content strategy. Designed and implemented a
-                    comprehensive solution for web tools including DNS service, domain registration, hosting, and
-                    email services.</p>
+                <p>Designed and implemented a new interface, content strategy, and solution for DNS service, domain
+                    registration, hosting, and email services. Hand-coded entire website in HTML, CSS, JS, JQuery, and PHP.
+                </p>
                 <h3>Horseback Riding Instructor and Coordinator:</h3>
-                <p>Provided for the general health needs of all of the camp&#39;s horses. Coordinated the daily
-                    riding of 60 kids. Managed employees and all inventory. Full time summer season, part-time
-                    winter season. </p>
+                <p>Managed employees and all inventory. Provided for the general health needs of all of the camp&#39;s
+                    horses. Coordinated the daily riding of 60 kids. Full time summer season, part-time winter season.</p>
             </dd>
             <dd>
                 <h2>UW School of Nursing Advancement</h2>
                 <h3>Student Assistant:</h3>
-                <p>Designed invitations, fliers, programs, etc. Ran daily gift
+                <p>Designed invitations, fliers, programs, etc. in Illustrator and Photoshop. Ran daily gift
                     audit reports and sent out &#39;thank you&#39;s. Maintained database entries.</p>
             </dd>
             <dd>
@@ -115,10 +120,7 @@
             </dd>
 
         <dt><h1>Interests</h1></dt><hr>
-            <dd><p>Mountaineering, horseback riding, downhill skiing, climbing, literature, cooking, baking,
+            <dd><p>Mountaineering, horseback-riding, alpine skiing, climbing, literature, cooking, baking,
                 chocolate production, hand lettering, drawing.</p></dd>
-
-        <dt><h1>References</h1></dt><hr>
-            <dd><p>Available upon request.</p></dd>
     </dl>
 </article>
