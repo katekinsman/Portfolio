@@ -1,12 +1,21 @@
 {
     "navigation": {
         "portfolio": "Portfolio",
+        "resume": "Resume",
+        "courier": "Courier"
+    },
+    "topNav": {
+        "portfolio": "Portfolio",
         "resume": "Resume"
     },
     "social": {
         "Facebook": "https://www.facebook.com/kate.kinsman.5",
         "Linkedin": "http://www.linkedin.com/in/katekinsman",
-        "Googleplus": "https://plus.google.com/+KatieKinsman",
         "Email": "mailto:katie@kinsman.net"
+    },
+    "socialIcons": {
+        "Facebook": "fa-facebook-square",
+        "Linkedin": "fa-linkedin-square",
+        "Email": "fa-envelope"
     }
 }

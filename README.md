@@ -1,3 +1,3 @@
 Portfolio
 =========
-This is my portfolio site.
+This is my portfolio site: http://kate.kinsman.net
